@@ -1,0 +1,71 @@
+export type Lang = "hy" | "en";
+
+type Dict = Record<string, { hy: string; en: string }>;
+
+export const dict: Dict = {
+  appName: { hy: "R'SOFT Campus", en: "R'SOFT Campus" },
+  schoolName: { hy: "R'SOFT Ծրագրավորման դպրոց", en: "R'SOFT Programming School" },
+  // auth
+  signIn: { hy: "Մուտք", en: "Sign in" },
+  signOut: { hy: "Ելք", en: "Sign out" },
+  email: { hy: "Էլ. փոստ", en: "Email" },
+  password: { hy: "Գաղտնաբառ", en: "Password" },
+  rememberMe: { hy: "Հիշել ինձ", en: "Remember me" },
+  forgotPassword: { hy: "Մոռացե՞լ եք գաղտնաբառը", en: "Forgot password?" },
+  demoAccounts: { hy: "Դեմո հաշիվներ", en: "Demo accounts" },
+  welcomeBack: { hy: "Բարի վերադարձ", en: "Welcome back" },
+  loginSubtitle: {
+    hy: "Մուտք գործիր քո ուսումնական տարածք",
+    en: "Sign in to your learning space",
+  },
+  resetPassword: { hy: "Վերականգնել գաղտնաբառը", en: "Reset password" },
+  backToLogin: { hy: "Վերադառնալ մուտքի էջ", en: "Back to sign in" },
+  // nav
+  dashboard: { hy: "Գլխավոր", en: "Dashboard" },
+  courses: { hy: "Դասընթացներ", en: "Courses" },
+  lessons: { hy: "Դասեր", en: "Lessons" },
+  homework: { hy: "Տնային աշխատանք", en: "Homework" },
+  grades: { hy: "Գնահատականներ", en: "Grades" },
+  attendance: { hy: "Հաճախումներ", en: "Attendance" },
+  calendar: { hy: "Օրացույց", en: "Calendar" },
+  announcements: { hy: "Հայտարարություններ", en: "Announcements" },
+  aiAssistant: { hy: "AI օգնական", en: "AI Assistant" },
+  profile: { hy: "Պրոֆիլ", en: "Profile" },
+  students: { hy: "Ուսանողներ", en: "Students" },
+  teachers: { hy: "Ուսուցիչներ", en: "Teachers" },
+  users: { hy: "Օգտատերեր", en: "Users" },
+  analytics: { hy: "Վերլուծություն", en: "Analytics" },
+  settings: { hy: "Կարգավորումներ", en: "Settings" },
+  review: { hy: "Ստուգում", en: "Review" },
+  // common
+  search: { hy: "Որոնել...", en: "Search..." },
+  notifications: { hy: "Ծանուցումներ", en: "Notifications" },
+  viewAll: { hy: "Տեսնել բոլորը", en: "View all" },
+  open: { hy: "Բացել", en: "Open" },
+  save: { hy: "Պահպանել", en: "Save" },
+  cancel: { hy: "Չեղարկել", en: "Cancel" },
+  submit: { hy: "Ուղարկել", en: "Submit" },
+  deadline: { hy: "Վերջնաժամկետ", en: "Deadline" },
+  teacher: { hy: "Ուսուցիչ", en: "Teacher" },
+  student: { hy: "Ուսանող", en: "Student" },
+  admin: { hy: "Ադմինիստրատոր", en: "Admin" },
+  progress: { hy: "Առաջընթաց", en: "Progress" },
+  averageGrade: { hy: "Միջին գնահատական", en: "Average grade" },
+  noData: { hy: "Տվյալներ չկան", en: "No data" },
+  // statuses
+  not_started: { hy: "Չսկսված", en: "Not started" },
+  in_progress: { hy: "Ընթացքի մեջ", en: "In progress" },
+  submitted: { hy: "Ուղարկված", en: "Submitted" },
+  ai_checked: { hy: "AI-ը ստուգել է", en: "AI checked" },
+  teacher_checked: { hy: "Ուսուցիչը ստուգել է", en: "Teacher checked" },
+  overdue: { hy: "Ժամկետանց", en: "Overdue" },
+  present: { hy: "Ներկա", en: "Present" },
+  absent: { hy: "Բացակա", en: "Absent" },
+  late: { hy: "Ուշացած", en: "Late" },
+  excused: { hy: "Հարգելի", en: "Excused" },
+  easy: { hy: "Հեշտ", en: "Easy" },
+  medium: { hy: "Միջին", en: "Medium" },
+  hard: { hy: "Բարդ", en: "Hard" },
+};
+
+export const translate = (key: string, lang: Lang) => dict[key]?.[lang] ?? key;
